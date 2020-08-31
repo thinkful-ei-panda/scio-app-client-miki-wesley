@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Raleway&display=swap');
+
+/* * {
+    font-family: 'Raleway', sans-serif;
+} */
+
+body {
+    background-color: #fffde7;
+    color: #212121;
+}
+
+.wrapper {
+    /* border: 1px solid #212121; */
+    width: 99%;
+    margin: auto;
+}
+
+.group {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.header-group {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.header-background-color {
+    background-color: #ffee58;
+}
+
+.nav-group {
+    /* border: 1px solid orange; */
+    background-color: #ffff8b;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+}
+
+.group-column {
+    align-items: center;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.item {
+    flex: 1;
+}
+
+/* Typography */
+
+h1 {  
+    font-family: 'Lora', serif;
+    /* font-weight: 400; */
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+a {
+    color: #212121;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.caption {
+    text-align: center;
+}
+
+/* Temp */
+
+p, button, input, label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+button, input, label {
+    margin: 5px;
+}
+
+input {
+    /* border: none; */
+    border: 1px solid #7b5e57;
+    border-radius: 3px;
+}
+
+button {
+    border-radius: 3px;
+}
+
+/* Elements */
+
+form {
+    text-align: center;
+}
+
+form > div {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    /* display: flex; */
+    margin: 5px;
+}
+
+footer > a {
+    text-decoration: underline;
+}
+
+@media all and (min-width: 500px) {
+    .wrapper {
+        width: 85%;
+    }
+
+    .group {
+        flex-flow: row wrap;
+    }
+
+    .header-group {
+        flex-flow: row wrap;
+    }
+
+    .nav-group {
+        background-color: #ffee58;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .nav-group > a  {
+        margin-left: 10px;
+    }
+
+    /* Typography */
+
+    h1 {
+        text-align: left;
+    }
+
+    .caption {
+        text-align: left;
+    }
+
+}
