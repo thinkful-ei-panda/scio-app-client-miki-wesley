@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 import LinkedLanguageApiService from '../../services/linked-language-api-service'
+import LinkedLanguageContext from '../../contexts/LinkedLanguageContext'
 import Word from './Word'
 
 class LinkedLanguage extends Component {
-    state = {
-        error: null,
-        language: {},
-        words: [],
-    }
+    static contextType = LinkedLanguageContext
 
     async componentDidMount() {
         try {
             const { language, words } = await LinkedLanguageApiService.getLinkedLanguage()
-
-            this.setState({language, words})
+            this.context.setLinkedLanguage(language, words)
         }
         catch(e) {
-            const { error } = e;
-            this.setState({error: error.message})
+            this.context.setError(e)
         }
 
     }
@@ -27,16 +22,14 @@ class LinkedLanguage extends Component {
     }
 
     render() {
-        const { error, words = [] } = this.state
-
+        const { error, words = [] } = this.context
 
         return (
             <article className="group">
                 <div role='alert'>
                     {error && <p>{error}</p>}
                 </div>
-                {/* {words.length ? 'Meow' : this.renderWords(words)} */}
-                {words.length ? this.renderWords(words) : 'Meow'}
+                {words.length ? this.renderWords(words) : ''}
             </article>
         )
     }

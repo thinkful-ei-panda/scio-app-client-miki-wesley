@@ -58,7 +58,7 @@ body {
     /* border: 1px solid #212121; */
     border-radius: 5px;
     /* box-shadow: 3px 3px 5px 3px #e0e0e0; */
-    box-shadow: 5px 5px 5px 1px #e0e0e0;
+    box-shadow: 5px 5px 5px 1px #bdbdbd;
     box-sizing: border-box;
     display: flex;
     /* flex: 1; */
@@ -144,8 +144,8 @@ input {
 }
 
 button {
-    background-color: #795548;
-    border: 1px solid #795548;
+    background-color: #5f4339;
+    border: 1px solid #5f4339;
     border-radius: 5px;
     color: #fff;
     font-size: 14px;
