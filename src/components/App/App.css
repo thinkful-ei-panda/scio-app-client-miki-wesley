@@ -75,6 +75,10 @@ body {
 
 /* Typography */
 
+h1 {
+    text-align: center;
+}
+
 h2 {
     font-family: 'Lora', serif;
     font-size: 28px;
@@ -107,6 +111,11 @@ a:hover {
 .caption {
     align-self: center;
     text-align: center;
+}
+
+.user {
+    color: #212121;
+    font-family: 'Raleway', sans-serif;
 }
 
 .word {
@@ -195,6 +204,10 @@ footer > a {
     }
 
     /* Typography */
+
+    h1 {
+        text-align: left;
+    }
 
     .header {
         text-align: left;
