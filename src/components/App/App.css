@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /* * {
     font-family: 'Raleway', sans-serif;
 } */
 
 body {
-    background-color: #fffde7;
+    background-color: #fffff7;
     color: #212121;
+    filter: sepia(8%)
 }
 
 .wrapper {
@@ -16,9 +18,12 @@ body {
 }
 
 .group {
-    /* border: 1px solid red; */
+    /* border: 1px solid #5f4339; */
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
 }
 
 .header-group {
@@ -37,7 +42,7 @@ body {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 5px;
     
 }
 
@@ -48,27 +53,51 @@ body {
     flex-flow: column wrap;
 }
 
+.word-group {
+    background-color: #fff;
+    /* border: 1px solid #212121; */
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 5px 3px #e0e0e0; */
+    box-shadow: 5px 5px 5px 1px #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    /* flex: 1; */
+    flex-flow: column wrap;
+    margin: 10px;
+    padding: 10px;
+    /* padding: 0 15px; */
+    width: 300px;
+}
+
 .item {
     flex: 1;
 }
 
 /* Typography */
 
-h1 {  
-    font-family: 'Lora', serif;
-    /* font-weight: 400; */
-    text-align: center;
-}
-
 h2 {
     font-family: 'Lora', serif;
     font-size: 28px;
+    font-weight: 500;
+    margin: 18px;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
     font-weight: 500;
 }
 
 a {
     color: #212121;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
+}
+
+.header {  
+    font-family: 'Lora', serif;
+    /* font-weight: 400; */
+    text-align: center;
 }
 
 a:hover {
@@ -76,28 +105,47 @@ a:hover {
 }
 
 .caption {
+    align-self: center;
     text-align: center;
+}
+
+.word {
+    margin: 10px;
+    /* margin: 5px 10px; */
 }
 
 /* Temp */
 
 p, button, input, label {
     font-family: 'Raleway', sans-serif;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
-button, input, label {
-    margin: 5px;
+input, label {
+    margin: 8px;
 }
 
 input {
-    /* border: none; */
-    border: 1px solid #7b5e57;
+    /* border: none;
+    border-bottom: 1px solid #795548; */
+    border: 1px solid #795548;
     border-radius: 3px;
+    padding: 2px 8px;
+    width: 300px;
 }
 
 button {
-    border-radius: 3px;
+    background-color: #795548;
+    border: 1px solid #795548;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin: 8px;
+    padding: 8px 16px;
+}
+
+button:hover {
+    box-shadow: 1px 1px 3px 1px #aeaeae;
 }
 
 /* Elements */
@@ -107,7 +155,7 @@ form {
 }
 
 form > div {
-    align-items: stretch;
+    /* align-items: stretch; */
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -116,7 +164,7 @@ form > div {
 
 footer {
     /* display: flex; */
-    margin: 5px;
+    margin: 10px;
 }
 
 footer > a {
@@ -148,11 +196,12 @@ footer > a {
 
     /* Typography */
 
-    h1 {
+    .header {
         text-align: left;
     }
 
     .caption {
+        align-self: flex-start;
         text-align: left;
     }
 
