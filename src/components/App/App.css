@@ -217,6 +217,13 @@ footer > a {
 }
 
 @media all and (min-width: 500px) {
+    .learn-guess-group {
+        margin: auto;
+        width: 75%;
+    }
+}
+
+@media all and (min-width: 1000px) {
     .wrapper {
         width: 85%;
     }

@@ -4,6 +4,7 @@ import UserContext from './UserContext'
 const LinkedLanguageContext = React.createContext({
     language: {},
     words: [],
+    word: null,
 })
 
 export default LinkedLanguageContext
@@ -12,6 +13,7 @@ export class LinkedLanguageProvider extends Component {
     static contextType = UserContext
 
     state = {
+        
         language: {},
         words: [],
         error: null,
@@ -28,6 +30,10 @@ export class LinkedLanguageProvider extends Component {
     setWords = (words) => {
         this.setState({words})
     }
+    
+    setNextWord = (word) => {
+        this.setState({word})
+    }
 
     setError = (e) => {
         const { error } = e
@@ -41,9 +47,12 @@ export class LinkedLanguageProvider extends Component {
         const value = {
             language: this.state.language,
             words: this.state.words,
+            word: this.state.word,
             setLinkedLanguage: this.setLinkedLanguage,
             setLanguage: this.setLanguage,
             setWords: this.setWords,
+            setNextWord: this.setNextWord,
+            setError: this.setError,
             error: this.state.error,
         }
 

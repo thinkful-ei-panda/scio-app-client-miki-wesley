@@ -1,19 +1,32 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom';
-// import LinkedLanguage from '../../components/LinkedLanguage/LinkedLanguage'
 import LinkedLanguageContext from '../../contexts/LinkedLanguageContext'
+import LinkedLanguageApiService from '../../services/linked-language-api-service'
 import Guess from '../../components/LinkedLanguage/Guess'
 
 class LearningRoute extends Component {
   static contextType = LinkedLanguageContext;
 
+  async componentDidMount() {
+    try {
+        const word = await LinkedLanguageApiService.getHead()
+        this.context.setNextWord(word)
+    }
+    catch(e) {
+        console.log(e)
+        this.context.setError(e)
+    }
+  }
+
   render() {
-    const { language } = this.context
+    const { error = null, language = [], word = {} } = this.context
 
     return (
       <section className="group-column">
-        <p className="caption">Total correct answers: {language.total_score}</p>
-        <h2>{language.name}</h2>
+        <div role='alert'>
+            {error && <p>{error}</p>}
+        </div>
+        <p className="caption">Total correct answers: {word.totalScore}</p>
+        {/* <h2>{language.name}</h2> */}
         <Guess /> 
       </section>
     );
