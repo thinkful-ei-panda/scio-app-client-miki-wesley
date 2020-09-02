@@ -42,7 +42,7 @@ class Header extends Component {
     return (
       <header className='header-background-color'>
         <div className='header-group wrapper'>
-            <h1 className='item'>
+            <h1 className='header item'>
             <Link className='header' to='/'>
                 Spaced repetition
             </Link>

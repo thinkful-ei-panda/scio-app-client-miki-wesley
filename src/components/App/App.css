@@ -8,12 +8,13 @@
 body {
     background-color: #fffff7;
     color: #212121;
-    filter: sepia(8%)
+    filter: sepia(15%);
+    font-family: 'Raleway', sans-serif;
 }
 
 .wrapper {
     /* border: 1px solid #212121; */
-    width: 99%;
+    width: 100%;
     margin: auto;
 }
 
@@ -32,15 +33,16 @@ body {
 }
 
 .header-background-color {
-    background-color: #ffee58;
+    /* background-color: #fdd835; */
+    background-color: #ffeb3b;
+    /* background-color: #ffee58; */
 }
 
 .nav-group {
-    /* border: 1px solid orange; */
+    align-items: center;
     background-color: #ffff8b;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     justify-content: space-evenly;
     padding: 5px;
     
@@ -53,42 +55,22 @@ body {
     flex-flow: column wrap;
 }
 
-.word-group {
-    background-color: #fff;
-    /* border: 1px solid #212121; */
-    border-radius: 5px;
-    /* box-shadow: 3px 3px 5px 3px #e0e0e0; */
-    box-shadow: 5px 5px 5px 1px #bdbdbd;
-    box-sizing: border-box;
-    display: flex;
-    /* flex: 1; */
-    flex-flow: column wrap;
-    margin: 10px;
-    padding: 10px;
-    /* padding: 0 15px; */
-    width: 300px;
-}
-
 .item {
     flex: 1;
 }
 
 /* Typography */
 
-h1 {
-    text-align: center;
-}
-
 h2 {
     font-family: 'Lora', serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 500;
-    margin: 18px;
+    /* margin: 18px; */
 }
 
 h3 {
     font-family: 'Lora', serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 500;
 }
 
@@ -98,49 +80,35 @@ a {
     text-decoration: none;
 }
 
-.header {  
-    font-family: 'Lora', serif;
-    /* font-weight: 400; */
-    text-align: center;
-}
-
 a:hover {
     text-decoration: underline;
 }
 
-.caption {
-    align-self: center;
+p, span {
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {  
+    font-family: 'Lora', serif;
+    font-size: 36px;
     text-align: center;
 }
 
-.user {
-    color: #212121;
+.caption {
+    align-self: center;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 .word {
     margin: 10px;
-    /* margin: 5px 10px; */
 }
 
-/* Temp */
+/* Elements */
 
-p, button, input, label {
+button, input, label {
     font-family: 'Raleway', sans-serif;
-    /* font-size: 18px; */
-}
-
-input, label {
-    margin: 8px;
-}
-
-input {
-    /* border: none;
-    border-bottom: 1px solid #795548; */
-    border: 1px solid #795548;
-    border-radius: 3px;
-    padding: 2px 8px;
-    width: 300px;
+    margin: 10px;
 }
 
 button {
@@ -148,13 +116,81 @@ button {
     border: 1px solid #5f4339;
     border-radius: 5px;
     color: #fff;
-    font-size: 14px;
-    margin: 8px;
+    font-size: 16px;
     padding: 8px 16px;
 }
 
 button:hover {
     box-shadow: 1px 1px 3px 1px #aeaeae;
+}
+
+input {
+    border: none;
+    border-bottom: 3px solid #795548;
+    /* border: 1px solid #795548; */
+    /* border-radius: 3px; */
+    padding: 2px 8px;
+    width: 300px;
+}
+
+.word-group {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 3px #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+.learn-guess-group {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 3px #e0e0e0;
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+}
+
+.learn-guess-score {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.learn-guess-score > p {
+    font-size: 14px;
+}
+
+.learn-guess-form {
+    display: flex;
+    flex-flow: row;
+}
+
+input#learn-guess-input {
+    /* border: 1px solid #795548; */
+    border: none;
+    border-bottom: 2px solid #795548;
+    border-radius: 0;
+    padding: 2px 8px;
+    width: 100%;
+}
+
+.learn-guess-form > label {
+    margin: 12px 8px 8px 8px;
+    box-sizing: border-box;
+}
+
+.learn-guess-form > button {
+    margin: 8px;
+    padding: 4px 8px;
+    /* box-sizing: border-box; */
 }
 
 /* Elements */
@@ -194,7 +230,9 @@ footer > a {
     }
 
     .nav-group {
-        background-color: #ffee58;
+        /* background-color: #fdd835; */
+        background-color: #ffeb3b;
+        /* background-color: #ffee58; */
         justify-content: flex-end;
         padding: 0;
     }
@@ -203,11 +241,12 @@ footer > a {
         margin-left: 10px;
     }
 
-    /* Typography */
-
-    h1 {
-        text-align: left;
+    .learn-guess-group {
+        margin: auto;
+        width: 30%;
     }
+
+    /* Typography */
 
     .header {
         text-align: left;

@@ -181,6 +181,7 @@ describe(`User story: Login`, function() {
             const tokenInStorage = win.localStorage.getItem(
               Cypress.env('TOKEN_KEY')
             )
+            console.log(Cypress.env('TOKEN_KEY'))
             expect(tokenInStorage).to.eql(loginToken)
           })
 
