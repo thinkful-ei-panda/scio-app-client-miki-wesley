@@ -18,7 +18,7 @@ class Guess extends Component {
             <h2>{nextWord}</h2>
             <form className="learn-guess-form" onSubmit={(e) => handleUserGuess(e)}>
                 <label htmlFor="learn-guess-input">Guess:</label>
-                <input id="learn-guess-input" name="learn-guess-input" placeholder="Input guess here" type="text" /> 
+                <input id="learn-guess-input" name="learn-guess-input" type="text" /> 
                 <button>Submit</button>
             </form>
         </article>       
