@@ -17,7 +17,7 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section className='group-column'>
+      <section className='log-group'>
         <h2>Login</h2>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}

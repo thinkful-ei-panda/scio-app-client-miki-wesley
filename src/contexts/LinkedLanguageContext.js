@@ -65,9 +65,9 @@ export class LinkedLanguageProvider extends Component {
             setWords: this.setWords,
             setCurrentWord: this.setCurrentWord,
             setAfterWord: this.setAfterWord,
-            setError: this.setError,
 
             error: this.state.error,
+            setError: this.setError,
         }
 
         return (

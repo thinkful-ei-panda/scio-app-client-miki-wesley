@@ -7,15 +7,14 @@ class Guess extends Component {
   render() {
     const { afterWord = {} } = this.context
     const { handleUserGuess } = this.props
-    const { nextWord, wordCorrectCount, wordIncorrectCount} = afterWord
 
     return (
         <article className="learn-guess-group">
             <div className="learn-guess-score">
-                <p>Correct Score: {wordCorrectCount}</p>
-                <p>Incorrect Score: {wordIncorrectCount}</p>
+                <p>Correct Score: {afterWord.wordCorrectCount}</p>
+                <p>Incorrect Score: {afterWord.wordIncorrectCount}</p>
             </div>
-            <h2>{nextWord}</h2>
+            <h2>{afterWord.nextWord}</h2>
             <form className="learn-guess-form" onSubmit={(e) => handleUserGuess(e)}>
                 <label htmlFor="learn-guess-input">Guess:</label>
                 <input id="learn-guess-input" name="learn-guess-input" type="text" /> 

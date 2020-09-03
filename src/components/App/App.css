@@ -95,7 +95,7 @@ p, span {
     margin: 10px;
 }
 
-/* Elements */
+/* Specific Elements */
 
 button, input, label {
     font-family: 'Raleway', sans-serif;
@@ -122,6 +122,13 @@ input {
     border-bottom: 3px solid #424242;
     padding: 2px 8px;
     width: 300px;
+}
+
+.log-group {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 25px;
 }
 
 .word-group {
@@ -221,6 +228,10 @@ footer > a {
 }
 
 @media all and (min-width: 500px) {
+    .log-group {
+        margin-top: 50px;
+    }
+
     .learn-guess-group {
         margin-top: 150px;
         width: 450px;
@@ -252,6 +263,10 @@ footer > a {
 
     .nav-group > a  {
         margin-left: 10px;
+    }
+
+    .log-group {
+        margin-top: 75px;
     }
 
     .learn-guess-group {

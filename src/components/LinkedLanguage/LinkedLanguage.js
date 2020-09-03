@@ -14,7 +14,6 @@ class LinkedLanguage extends Component {
         catch(e) {
             this.context.setError(e)
         }
-
     }
 
     renderWords(words) {
