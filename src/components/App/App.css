@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* * {
-    font-family: 'Raleway', sans-serif;
-} */
-
 body {
     background-color: #fffff7;
     color: #424242;
@@ -13,13 +9,11 @@ body {
 }
 
 .wrapper {
-    /* border: 1px solid #212121; */
     width: 100%;
     margin: auto;
 }
 
 .group {
-    /* border: 1px solid #5f4339; */
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -33,16 +27,11 @@ body {
 }
 
 .header-background-color {
-    /* background-color: #fdd835; */
-    /* background-color: #ffeb3b; */
-    /* background-color: #ffee58; */
-    background-color: #fff8e1;
+    background-color: #fff9c4;
 }
 
 .nav-group {
     align-items: center;
-    /* background-color: #ffff8b; */
-    /* background-color: #ccc7af; */
     background-color: #e5e1c8;
     display: flex;
     flex-flow: row wrap;
@@ -53,7 +42,6 @@ body {
 
 .group-column {
     align-items: center;
-    /* border: 1px solid yellow; */
     display: flex;
     flex-flow: column wrap;
 }
@@ -68,7 +56,6 @@ h2 {
     font-family: 'Lora', serif;
     font-size: 30px;
     font-weight: 500;
-    /* margin: 18px; */
 }
 
 h3 {
@@ -86,7 +73,6 @@ a {
 a:hover {
     color: #c62828;
     font-weight: 700;
-    /* text-decoration: underline; */
 }
 
 p, span {
@@ -134,8 +120,6 @@ button:hover {
 input {
     border: none;
     border-bottom: 3px solid #424242;
-    /* border: 1px solid #795548; */
-    /* border-radius: 3px; */
     padding: 2px 8px;
     width: 300px;
 }
@@ -157,10 +141,8 @@ input {
     box-shadow: 5px 5px 5px 3px #e0e0e0;
     display: flex;
     flex-flow: column wrap;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-top: 100px;
+    padding: 20px;
     text-align: center;
     width: fit-content;
 }
@@ -191,7 +173,6 @@ input {
 }
 
 input#learn-guess-input {
-    /* border: 1px solid #795548; */
     border: none;
     border-bottom: 2px solid #424242;
     border-radius: 0;
@@ -210,7 +191,6 @@ input#learn-guess-input {
     font-size: 14px;
     margin: 8px;
     padding: 4px 8px;
-    /* box-sizing: border-box; */
 }
 
 /* Elements */
@@ -220,7 +200,6 @@ form {
 }
 
 form > div {
-    /* align-items: stretch; */
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -238,7 +217,7 @@ footer > a {
 
 @media all and (min-width: 500px) {
     .learn-guess-group {
-        margin: auto;
+        margin-top: 150px;
         width: 450px;
     }
 }
@@ -260,7 +239,8 @@ footer > a {
         /* background-color: #fdd835; */
         /* background-color: #ffeb3b; */
         /* background-color: #ffee58; */
-        background-color: #fff8e1;
+        /* background-color: #fff8e1; */
+        background-color: #fff9c4;
         justify-content: flex-end;
         padding: 0;
     }
@@ -270,7 +250,7 @@ footer > a {
     }
 
     .learn-guess-group {
-        margin: auto;
+        margin-top: 175px;
         width: 500px;
     }
 
