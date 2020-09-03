@@ -7,9 +7,9 @@ class Guess extends Component {
   static contextType = LinkedLanguageContext;
 
   render() {
-    console.log(this.context)
-    const { word = {} } = this.context
-    const { nextWord, wordCorrectCount, wordIncorrectCount} = word
+    const { afterWord = {} } = this.context
+    const { handleUserGuess } = this.props
+    const { nextWord, wordCorrectCount, wordIncorrectCount} = afterWord
 
     return (
         <article className="learn-guess-group">
@@ -18,9 +18,9 @@ class Guess extends Component {
                 <p>Incorrect Score: {wordIncorrectCount}</p>
             </div>
             <h2>{nextWord}</h2>
-            <form className="learn-guess-form">
+            <form className="learn-guess-form" onSubmit={(e) => handleUserGuess(e)}>
                 <label htmlFor="learn-guess-input">Guess:</label>
-                <input id="learn-guess-input" placeholder="Input guess here" type="text" /> 
+                <input id="learn-guess-input" name="learn-guess-input" placeholder="Input guess here" type="text" /> 
                 <button>Submit</button>
             </form>
         </article>       

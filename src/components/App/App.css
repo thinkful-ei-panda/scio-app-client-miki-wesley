@@ -173,6 +173,14 @@ input {
     flex-flow: row;
 }
 
+.learn-guess-correct {
+    color: #1b5e20;
+}
+
+.learn-guess-incorrect {
+    color: #b71c1c;
+}
+
 input#learn-guess-input {
     /* border: 1px solid #795548; */
     border: none;

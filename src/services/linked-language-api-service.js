@@ -20,7 +20,7 @@ const LinkedLanguageApiService = {
     getHead() {
         return fetch(`${config.API_ENDPOINT}/language/head`, {
             'method': 'GET',
-            headers: {
+            'headers': {
                 'Authorization': `Bearer ${TokenService.getAuthToken()}`,
             }
         })
@@ -33,8 +33,22 @@ const LinkedLanguageApiService = {
             })
     },
 
-    getNextWord() {
+    postGuess(guess) {
+        return fetch(`${config.API_ENDPOINT}/language/guess`, {
+            'method': 'POST',
+            'headers': {
+                'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+                'Content-Type': 'application/json'
+            },
+            'body': JSON.stringify({guess})
+        })
+            .then(response => {
+                if(!response.ok) {
+                    return response.json().then(e => Promise.reject(e))
+                }
 
+                return response.json()
+            })
     }
 }
 
