@@ -44,7 +44,7 @@ export class LinkedLanguageProvider extends Component {
 
     setError = (e) => {
         let { error } = e
-        if(error === 'Unauthorized')
+        if(error === 'Unauthorized request')
             this.context.processLogout()
 
         if(error ===    `Missing 'guess' in request body`)
