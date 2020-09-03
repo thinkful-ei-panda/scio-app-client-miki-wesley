@@ -12,7 +12,7 @@ class Answer extends Component {
           <p className="learn-guess-incorrect">Incorrect Score: {++incorrect}</p>
         </div>
           <h3>{answer}</h3>
-          <p className="learn-guess-incorrect">Sorry, you sucky suck!</p>
+          <p className="learn-guess-incorrect">Sorry! Keep practicing and you'll get this right next time!</p>
       </>
     )
 }
@@ -25,7 +25,7 @@ class Answer extends Component {
             <p>Incorrect Score: {incorrect}</p>
           </div>
             <h3>{answer}</h3>
-            <p className="learn-guess-correct">Yay, but not good enough.</p>
+            <p className="learn-guess-correct">Great, keep practicing to reinforce the new word!</p>
         </>
       )
   }
