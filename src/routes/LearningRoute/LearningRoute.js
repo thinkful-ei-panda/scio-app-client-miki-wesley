@@ -18,10 +18,9 @@ class LearningRoute extends Component {
 
     try {
         const word = await LinkedLanguageApiService.postGuess(guess)
-        await Promise.all([this.context.setAfterWord(word), this.setState({guess: false})])
+        await Promise.all([this.context.setAfterWord(word), this.setState({guess: false}), this.context.setError(null)])
     }
     catch(e) {
-        console.log(e)
         this.context.setError(e)
     }
   }
@@ -50,14 +49,14 @@ class LearningRoute extends Component {
 
     return (
       <section className="group-column">
-        <div role='alert'>
-            {error && <p>{error}</p>}
-        </div>
         <p className="caption">Total correct answers: {afterWord.totalScore}</p>
         {(this.state.guess)
             ? <Guess handleUserGuess={this.handleUserGuess}/>
             : <Answer handleUserNextWord={this.handleUserNextWord} />
         }
+        <div role='alert'>
+            {error && <p>{error}</p>}
+        </div>
       </section>
     );
   }

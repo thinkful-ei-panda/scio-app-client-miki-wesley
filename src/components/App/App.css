@@ -181,6 +181,11 @@ input#learn-guess-input {
     width: 100%;
 }
 
+div[role=alert] {
+    color: #b71c1c;
+    font-weight: 700;
+}
+
 .learn-guess-form > label {
     font-size: 14px;
     margin: 14px 8px 8px 8px;

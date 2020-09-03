@@ -43,11 +43,14 @@ export class LinkedLanguageProvider extends Component {
     }
 
     setError = (e) => {
-        const { error } = e
-        if(error.message && error.message === 'Unauthorized')
+        let { error } = e
+        if(error === 'Unauthorized')
             this.context.processLogout()
-        
-        this.setState({error: error.message})
+
+        if(error ===    `Missing 'guess' in request body`)
+            error = 'Please enter a valid string'
+
+        this.setState({error})
     }
 
     render() {
