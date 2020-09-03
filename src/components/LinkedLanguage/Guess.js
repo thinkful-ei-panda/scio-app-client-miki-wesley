@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom';
-// import LinkedLanguageApiService from '../../services/linked-language-api-service'
 import LinkedLanguageContext from '../../contexts/LinkedLanguageContext'
 
 class Guess extends Component {

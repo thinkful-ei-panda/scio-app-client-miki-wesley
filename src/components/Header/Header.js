@@ -44,7 +44,7 @@ class Header extends Component {
         <div className='header-group wrapper'>
             <h1 className='header item'>
             <Link className='header' to='/'>
-                Spaced repetition
+                sciō
             </Link>
             </h1>
             {TokenService.hasAuthToken()

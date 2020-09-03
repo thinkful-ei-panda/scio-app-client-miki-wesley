@@ -18,7 +18,6 @@ class LearningRoute extends Component {
 
     try {
         const word = await LinkedLanguageApiService.postGuess(guess)
-        console.log(word)
         await Promise.all([this.context.setAfterWord(word), this.setState({guess: false})])
     }
     catch(e) {
@@ -30,10 +29,8 @@ class LearningRoute extends Component {
   handleUserNextWord = async(e, afterWord) => {
       e.preventDefault(e)
 
-      console.log(afterWord)
-
-      const { nextWord, wordCorrectCount, wordIncorrectCount, totalScore } = afterWord
-      const word = { nextWord, wordCorrectCount, wordIncorrectCount, totalScore }
+      const { nextWord, totalScore, wordCorrectCount, wordIncorrectCount } = afterWord
+      const word = { nextWord, totalScore, wordCorrectCount, wordIncorrectCount }
 
       await Promise.all([this.context.setCurrentWord(word), this.context.setAfterWord(word), this.setState({guess: true})])
   }
@@ -44,7 +41,6 @@ class LearningRoute extends Component {
         await Promise.all([this.context.setCurrentWord(word), this.context.setAfterWord(word)])
     }
     catch(e) {
-        console.log(e)
         this.context.setError(e)
     }
   }
@@ -58,7 +54,10 @@ class LearningRoute extends Component {
             {error && <p>{error}</p>}
         </div>
         <p className="caption">Total correct answers: {afterWord.totalScore}</p>
-        {this.state.guess ? <Guess handleUserGuess={this.handleUserGuess}/> : <Answer handleUserNextWord={this.handleUserNextWord} />}
+        {(this.state.guess)
+            ? <Guess handleUserGuess={this.handleUserGuess}/>
+            : <Answer handleUserNextWord={this.handleUserNextWord} />
+        }
       </section>
     );
   }

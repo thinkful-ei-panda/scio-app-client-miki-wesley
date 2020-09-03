@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import LinkedLanguageApiService from '../../services/linked-language-api-service'
 import UserContext from './UserContext'
 
 const LinkedLanguageContext = React.createContext({
@@ -7,6 +6,7 @@ const LinkedLanguageContext = React.createContext({
     words: [],
     currentWord: {},
     afterWord: {},
+    error: null,
 })
 
 export default LinkedLanguageContext
@@ -56,12 +56,14 @@ export class LinkedLanguageProvider extends Component {
             words: this.state.words,
             currentWord: this.state.currentWord,
             afterWord: this.state.afterWord,
+
             setLinkedLanguage: this.setLinkedLanguage,
             setLanguage: this.setLanguage,
             setWords: this.setWords,
             setCurrentWord: this.setCurrentWord,
             setAfterWord: this.setAfterWord,
             setError: this.setError,
+
             error: this.state.error,
         }
 
