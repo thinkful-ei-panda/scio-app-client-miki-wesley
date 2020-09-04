@@ -85,20 +85,20 @@ describe(`User story: Answer feedback`, function() {
         const [languageHeadFixture, incorrectFixture] = fixtures
 
         cy.get('main').within($main => {
-          cy.get('.DisplayScore p')
+          cy.get('p.caption')
             .should(
               'have.text',
-              `Your total score is: ${incorrectFixture.totalScore}`,
+              `Total Score: ${incorrectFixture.totalScore}`,
             )
-          cy.get('h2')
+          cy.get('p.cy-incorrect-feedback')
             .should(
               'have.text',
-              `Good try, but not quite right :(`,
+              `Sorry! Keep practicing and you'll get this right next time!`,
             )
-          cy.get('.DisplayFeedback p')
+          cy.get('h3')
             .should(
               'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
+              `${incorrectFixture.answer}`,
             )
           cy.get('button')
             .should(
@@ -139,20 +139,20 @@ describe(`User story: Answer feedback`, function() {
         const [languageHeadFixture, incorrectFixture] = fixtures
 
         cy.get('main').within($main => {
-          cy.get('.DisplayScore p')
+          cy.get('p.caption')
             .should(
               'have.text',
-              `Your total score is: ${incorrectFixture.totalScore}`,
+              `Total Score: ${incorrectFixture.totalScore}`,
             )
-          cy.get('h2')
+          cy.get('p.cy-correct-feedback')
             .should(
               'have.text',
-              `You were correct! :D`,
+              `Great, keep practicing to reinforce the new word!`,
             )
-          cy.get('.DisplayFeedback p')
+          cy.get('h3')
             .should(
               'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
+              `${incorrectFixture.answer}`,
             )
           cy.get('button')
             .should(

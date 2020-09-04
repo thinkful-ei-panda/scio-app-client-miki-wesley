@@ -49,7 +49,7 @@ class LearningRoute extends Component {
 
     return (
       <section className="group-column">
-        <p className="caption">Total correct answers: {afterWord.totalScore}</p>
+        <p className="caption">Total Score: {afterWord.totalScore}</p>
         {(this.state.guess)
             ? <Guess handleUserGuess={this.handleUserGuess}/>
             : <Answer handleUserNextWord={this.handleUserNextWord} />

@@ -11,9 +11,9 @@ class DashboardRoute extends Component {
 
     return (
       <section className="group-column">
-        <p className="caption">Words to Practice</p>
+        <p className="caption">Words to practice</p>
         <h2>{language.name}</h2>
-        <p>Total correct answers: {language.total_score}</p>
+        <p>Total Score: {language.total_score}</p>
         <Link to={'/learn'}><button>START PRACTICE</button></Link>
         <LinkedLanguage />
       </section>

@@ -12,7 +12,7 @@ class Answer extends Component {
           <p className="learn-guess-incorrect">Incorrect Score: {++incorrect}</p>
         </div>
           <h3>{answer}</h3>
-          <p className="learn-guess-incorrect">Sorry! Keep practicing and you'll get this right next time!</p>
+          <p className="cy-incorrect-feedback learn-guess-incorrect">Sorry! Keep practicing and you'll get this right next time!</p>
       </>
     )
 }
@@ -25,7 +25,7 @@ class Answer extends Component {
             <p>Incorrect Score: {incorrect}</p>
           </div>
             <h3>{answer}</h3>
-            <p className="learn-guess-correct">Great, keep practicing to reinforce the new word!</p>
+            <p className="cy-correct-feedback learn-guess-correct">Great, keep practicing to reinforce the new word!</p>
         </>
       )
   }
@@ -43,7 +43,7 @@ class Answer extends Component {
                 : this.renderIncorrect(answer, wordCorrectCount, wordIncorrectCount)
             }
             <div>
-                <button onClick={(e) => handleUserNextWord(e, afterWord)}>Next Word</button>
+                <button onClick={(e) => handleUserNextWord(e, afterWord)}>Try another word!</button>
             </div>
         </article>   
     );

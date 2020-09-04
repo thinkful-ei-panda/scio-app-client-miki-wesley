@@ -37,14 +37,14 @@ describe(`User story: User's dashboard`, function() {
         cy.root()
           .should(
             'contain',
-            `Total correct answers: ${language.total_score}`,
+            `Total Score: ${language.total_score}`,
           )
 
         cy.get('a')
           .should('have.attr', 'href', '/learn')
-          .and('have.text', 'Start practicing')
+          .and('have.text', 'START PRACTICE')
 
-        cy.get('h3')
+        cy.get('p.caption')
           .should('have.text', 'Words to practice')
       })
     })
@@ -55,20 +55,20 @@ describe(`User story: User's dashboard`, function() {
     cy.fixture('language.json').then(({ words }) => {
 
       words.forEach((word, idx) => {
-        cy.get('main section li').eq(idx).within($li => {
+        cy.get('main section article div.word-group').eq(idx).within($div => {
 
-          cy.get('h4').should('have.text', word.original)
-
+          cy.get('h3').should('have.text', word.original)
+        
           cy.root()
             .should(
               'contain',
-              `correct answer count: ${word.correct_count}`
+              `Correct: ${word.correct_count}`
             )
 
           cy.root()
             .should(
               'contain',
-              `incorrect answer count: ${word.incorrect_count}`
+              `Incorrect: ${word.incorrect_count}`
             )
         })
       })
