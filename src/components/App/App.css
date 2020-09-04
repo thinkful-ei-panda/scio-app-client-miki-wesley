@@ -37,7 +37,6 @@ body {
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 5px;
-    
 }
 
 .group-column {
@@ -125,6 +124,13 @@ input {
 }
 
 .log-group {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 100px;
+}
+
+.signup-group {
     align-items: center;
     display: flex;
     flex-flow: column wrap;
@@ -229,7 +235,11 @@ footer > a {
 
 @media all and (min-width: 500px) {
     .log-group {
-        margin-top: 50px;
+        margin-top: 150px;
+    }
+
+    .signup-group {
+        margin-top: 100px;
     }
 
     .learn-guess-group {
@@ -266,7 +276,11 @@ footer > a {
     }
 
     .log-group {
-        margin-top: 75px;
+        margin-top: 175px;
+    }
+
+    .signup-group {
+        margin-top: 125px;
     }
 
     .learn-guess-group {

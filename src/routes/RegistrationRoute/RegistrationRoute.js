@@ -19,7 +19,7 @@ class RegistrationRoute extends Component {
         <p className='caption'>
           Practice learning a language with the spaced repetition revision technique.
         </p>
-        <div className='log-group'>
+        <div className='signup-group'>
             <h2>Sign up</h2>
             <RegistrationForm
             onRegistrationSuccess={this.handleRegistrationSuccess}
