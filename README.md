@@ -1,6 +1,9 @@
-# Spaced Repetition Capstone by Michelle Francisco and Wesley Rou
+# Spaced Repetition Capstone 
+
+# by Michelle Francisco and Wesley Rou
 
 Live App: https://scio-app.vercel.app/
+
 Server Repo: https://github.com/thinkful-ei-panda/scio-app-server-miki-wesley
 
 
